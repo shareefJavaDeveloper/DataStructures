@@ -1,0 +1,36 @@
+package ds.arrays;
+
+public class ElementInASortedRotatedArray {
+	/**
+	 * Binary Search
+	 * 1. array should be sorted -- incr/decr
+	 * 2. array increasing and decreasing [2,5,7,20,13,10,5,1] max
+	 * (Implementing)3. sorted array's that are rotated [3,4,5,6,1,2]
+	 * 4. zigzaw format.
+	 * ----------------------------------------------------------
+	 * Find the  element from array which is rotated for n times
+	 * @param array
+	 * @param low
+	 * @param high
+	 * @param key
+	 * @return
+	 */
+	private static int findElement(int[] array, int low, int high, int key) {
+		
+		
+		
+		return 0;
+	}
+		
+	public static void main(String[] args) {
+		
+		int[] array = {4,5,6,7,1,2,3};
+		int low = 0;
+		int high = array.length;
+		int key = 5;
+		int index = findElement(array,low,high-1,key);
+		System.out.println(index);
+
+	}
+	
+}
