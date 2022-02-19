@@ -2,7 +2,11 @@ package ds.arrays;
 
 public class SortingAnArray_MergeSort {
 	/**
-	 * 
+	 * Merge sort technique
+	 * --------------------------
+	 * @TimeComplexity - O(nlogn)
+	 * @SpaceComplexity - O(n)
+	 * --------------------------
 	 * @param array
 	 * @param result
 	 * @param low
@@ -17,9 +21,9 @@ public class SortingAnArray_MergeSort {
 		
 		int mid = (low+high)/2;
 		
-		mergeSort(array, result, low, mid);
-		mergeSort(array, result, mid+1, high);
-		merge(array,result,low,mid,high);
+		mergeSort(array, result, low, mid); //divide left portion
+		mergeSort(array, result, mid+1, high); //divide right portion
+		merge(array,result,low,mid,high); //merge by comparing
 	}
 	
 	/**

@@ -16,8 +16,11 @@ public class JumpingGameProblem {
 	 */
 	private static int findMinNoOfJumps(int[] array, int length) {
 		
+		//Initially positioned at first index.
 		int a = array[0];
 		int b = array[0];
+		
+		//first jump should be 1
 		int jump = 1;
 		
 		for (int i = 0; i < length; i++) {
