@@ -47,7 +47,7 @@ public class MajorityOfElements {
 	 *  -----------------------------------------------
 	 * @param array
 	 */
-	private static int findMajorityOfElementsUsingOptimizedWay(int[] array) {
+	private static void findMajorityOfElementsUsingOptimizedWay(int[] array) {
 		int currentIndex =0 ;
 		int count  = 1;
 		for (int i = 0; i < array.length; i++) {
@@ -62,8 +62,19 @@ public class MajorityOfElements {
 				count = 1;
 		}
 		
-		return array[currentIndex];
-		
+		int countingRecurrence =0;
+		for (int i = 0; i < array.length; i++) {
+			
+			if(array[i]==array[currentIndex]) {
+				countingRecurrence++;
+			}
+		}
+			
+			if(countingRecurrence==(array.length/2)) {
+				System.out.println(array[currentIndex]);
+			}
+			else
+				System.out.println("No element found that represent majority in array");
 		
 	}
 	
@@ -82,8 +93,9 @@ public class MajorityOfElements {
 		System.out.println();
 		
 		System.out.println("----Using Optimized way to use O(1) SpaceComplexity----");
-		int element = findMajorityOfElementsUsingOptimizedWay(array);
-		System.out.println(element);
+		int[] arr = {1,2,3,2,3,1};
+		findMajorityOfElementsUsingOptimizedWay(arr);
+		
 	}
 
 
