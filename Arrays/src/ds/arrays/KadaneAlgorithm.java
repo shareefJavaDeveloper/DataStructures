@@ -3,9 +3,10 @@ package ds.arrays;
 public class KadaneAlgorithm {
 	/**
 	 * Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
+	 * Below code will not work if all the elements are negative (use another method to impl in future)
 	 * ---------------------------------
 	 * @TimeComplexity - O(N)
-	 * @SpaceComplexity - O(N)
+	 * @SpaceComplexity - O(1)
 	 * ---------------------------------
 	 * @param array
 	 */
