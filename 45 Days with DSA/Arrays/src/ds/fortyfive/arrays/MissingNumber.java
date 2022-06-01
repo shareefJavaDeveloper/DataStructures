@@ -1,10 +1,14 @@
 package ds.fortyfive.arrays;
 
 public class MissingNumber {
+	/**
+	 * Given an array of numbers which are NATURAL/WHOLE i.e starting from 1
+	 * @param args
+	 */
 
 	public static void main(String[] args) {
 		
-		int[] array = {6,4,3,2,1,5,7,9};
+		int[] array = {1,2,3,5,6,7};
 		int n = array.length;
 		
 		System.out.println(missingNum(array,n));
