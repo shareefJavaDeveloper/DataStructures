@@ -10,6 +10,9 @@ public class Test {
         linkedList.show();
         linkedList.delete(20);
         linkedList.show();
+        linkedList.reverse();
+        linkedList.show();
+
     }
 
 }

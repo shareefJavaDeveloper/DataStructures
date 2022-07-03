@@ -114,6 +114,20 @@ public class LinkedList {
          return -1;
     }
 
+    public void reverse(){
+        Node curr = head;
+        Node prev = null;
+
+        while(curr != null){
+            Node temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+
+       head = prev;
+    }
+
     public void show(){
         Node node = head;
         if(head==null) return;
