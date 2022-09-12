@@ -4,6 +4,13 @@
 # Log file
 *.log
 
+#unwantedfiles
+*.iml
+*.xml
+*.classpath
+*.project
+*.prefs
+
 # BlueJ files
 *.ctxt
 
