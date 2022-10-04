@@ -7,25 +7,24 @@ public class ReverseAnArray {
 		int array[] = {1,2,3,4,5,9,8,7,6};
 		int l=0;
 		int r = array.length-1;
-		int[] reverse = reverseGivenArray(l,r,array);
+		reverseGivenArray(l,r,array);
 		System.out.print("[ ");
-		for (int i = 0; i < reverse.length; i++) {
-			System.out.print(reverse[i]+ ",");
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i]+ ",");
 		}
 		System.out.print(" ]");
 
 	}
 
-	public static int[] reverseGivenArray(int l, int r, int[] array) {
+	public static void reverseGivenArray(int l, int r, int[] array) {
 
 		int temp;
-		if (l>=r) return array;
+		if (l>=r) return;
 		temp = array[l];
 		array[l]=array[r];
 		array[r]=temp;
 		
 		reverseGivenArray(l+1, r-1, array);
-		return array;
 	}
 
 }

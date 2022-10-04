@@ -1,31 +1,36 @@
 package ds.Recursion;
 
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class PowerSet {
 	
-	
+	//Nothing but subsequences
 	
 	public static void main(String[] args) {
 		
 		String s = "abc";
 		int start = 0;
-		String curr = "";
-		powerSet(s,start,curr);
+		List<String> list = new ArrayList<String>();
+		powerSet(s,start,list);
 		
 		
 	}
 
-	private static void powerSet(String s, int start, String curr) {
+	private static void powerSet(String s, int start, List<String> list) {
 		
-		if(start == s.length()) {
-			System.out.println("( "+ curr+" ) ");
+		if(start>=s.length()) {
+			System.out.println(list);
 			return;
 		}
+		Character ch = s.charAt(start);
+		list.add(ch.toString());
 		
-		powerSet(s, start+1, curr+s.charAt(start));
-		powerSet(s, start+1, curr);
+		powerSet(s, start+1, list);
+		
+		list.remove(ch.toString());
+		
+		powerSet(s, start+1, list);
 		
 	}
 
